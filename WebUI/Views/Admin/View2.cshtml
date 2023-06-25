@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+
+    
+<title="asf" />
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery.form.js"></script>
+<script>
+    $(function () {
+        $("#inFile").on("change", function () {
+            var $file = $(this);
+            var fileObj = $file[0];
+
+            var windowURL = window.URL || window.webkitURL;
+            var dataURL;
+            var $img = $("#img1");
+
+            if (fileObj && fileObj.files && fileObj.files[0]) {
+                dataURL = windowURL.createObjectURL(fileObj.files[0]);
+                $img.attr('src', dataURL);
+            } else {
+                dataURL = $file.val();
+                var imgObj = document.getElementById("preview");
+                imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+
+            }
+        });
+    });
+
+</script>
+
+
+</head>
+
+    <body>
+
+
+        	<input id="inFile" type="file">
+	<img id="img1" src="" alt="1111">
+        	<img id="img2" src="" alt="2222">
+    </body>
+    </html>

@@ -1,0 +1,17 @@
+﻿@model Domain.Entities.Product
+@{
+    ViewBag.Title = "Ppp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div style="padding:100px 50px;border:5px red solid">
+<h2>Ppp</h2>
+@Model
+@Model.Name
+@using (Html.BeginForm()){
+    @Html.TextBoxFor(x=>x.Name)
+    <input type="submit" />
+    }
+@{Model.Name="ddd";}
+@Model.Name
+
+</div>

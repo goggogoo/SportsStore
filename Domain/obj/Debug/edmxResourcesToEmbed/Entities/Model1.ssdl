@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SportsStoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="t_educational">
+    <Key>
+      <PropertyRef Name="BB" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="BB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="t_employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="loginname" Type="nvarchar" MaxLength="50" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="age" Type="int" />
+    <Property Name="birthday" Type="datetime" />
+    <Property Name="dept_id" Type="nvarchar" MaxLength="50" />
+    <Property Name="position" Type="nvarchar" MaxLength="50" />
+    <Property Name="gender" Type="int" />
+    <Property Name="married" Type="int" />
+    <Property Name="salary" Type="nvarchar" MaxLength="50" />
+    <Property Name="educational" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="remarks" Type="nvarchar" MaxLength="1000" />
+    <Property Name="school" Type="nvarchar" MaxLength="50" />
+    <Property Name="createtime" Type="datetime" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="SportsStoreModelStoreContainer">
+    <EntitySet Name="t_educational" EntityType="Self.t_educational" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="t_employee" EntityType="Self.t_employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

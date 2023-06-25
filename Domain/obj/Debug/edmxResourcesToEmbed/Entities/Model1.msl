@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SportsStoreModelStoreContainer" CdmEntityContainer="SportsStoreEntities3">
+    <EntitySetMapping Name="t_employee">
+      <EntityTypeMapping TypeName="SportsStoreModel.t_employee">
+        <MappingFragment StoreEntitySet="t_employee">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="loginname" ColumnName="loginname" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="position" ColumnName="position" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="married" ColumnName="married" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="educational" ColumnName="educational" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="createtime" ColumnName="createtime" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="t_educational">
+      <EntityTypeMapping TypeName="SportsStoreModel.t_educational">
+        <MappingFragment StoreEntitySet="t_educational">
+          <ScalarProperty Name="BB" ColumnName="BB" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
